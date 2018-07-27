@@ -6,21 +6,21 @@
 ****
 *****
 '''
-# num = 5
-# for i in range(1, num+1):
-#     print("*"*i)
-#
-# for row in range(1, 6):
-#     for col in range(row):
-#         print("*", end="")
-#     print()
-#
-# # generic approach -->
-# for row in range(1, 6):
-#     s= ""
-#     for col in range(row):
-#         s += "*"
-#     print(s)
+num = 5
+for i in range(1, num+1):
+    print("*"*i)
+
+for row in range(1, 6):
+    for col in range(row):
+        print("*", end="")
+    print()
+
+# generic approach -->
+for row in range(1, 6):
+    s= ""
+    for col in range(row):
+        s += "*"
+    print(s)
 
 
 #2)
@@ -33,29 +33,29 @@
 '''
 
 #generic-->
-# numrows=10
-# numspaces = numrows-1
-# numstars = 1
-# for r in range(1,numrows+1):
-#     s = ""
-#     for c in range(numspaces):
-#         s += " "
-#     for c in range(numstars):
-#         s += "*"
-#     print(s)
-#     numspaces -= 1
-#     numstars += 2
-#
-# numrows=10
-# numspaces = numrows-1
-# numstars = 1
-# for r in range(1,numrows+1):
-#     s = ""
-#     s += " "* numspaces
-#     s += "*"*numstars
-#     print(s)
-#     numspaces -= 1
-#     numstars += 2
+numrows=10
+numspaces = numrows-1
+numstars = 1
+for r in range(1,numrows+1):
+    s = ""
+    for c in range(numspaces):
+        s += " "
+    for c in range(numstars):
+        s += "*"
+    print(s)
+    numspaces -= 1
+    numstars += 2
+
+numrows=10
+numspaces = numrows-1
+numstars = 1
+for r in range(1,numrows+1):
+    s = ""
+    s += " "* numspaces
+    s += "*"*numstars
+    print(s)
+    numspaces -= 1
+    numstars += 2
 
 #3)
 '''
@@ -66,37 +66,37 @@
 '''
 
 
-# count = 1
-# for r in range(1,5):
-#     s = ""
-#     for col in range(r):
-#         s += str(count)
-#         count += 1
-#     print(s)
+count = 1
+for r in range(1,5):
+    s = ""
+    for col in range(r):
+        s += str(count)
+        count += 1
+    print(s)
 
-#4)
+# 4)
 '''
    1
   232
  34543
 4567654
 '''
-# num_spaces = 3
-# num_cols = 1
-# for r in range(4):
-#     s=""
-#     for c in range(num_spaces):
-#         s+=" "
-#     i = r + 1
-#     for c in range(num_cols):
-#         s+= str(i)
-#         if  c < num_cols//2 :
-#             i += 1
-#         else:
-#             i -= 1
-#     print(s)
-#     num_cols+=2
-#     num_spaces -=1
+num_spaces = 3
+num_cols = 1
+for r in range(4):
+    s=""
+    for c in range(num_spaces):
+        s+=" "
+    i = r + 1
+    for c in range(num_cols):
+        s+= str(i)
+        if  c < num_cols//2 :
+            i += 1
+        else:
+            i -= 1
+    print(s)
+    num_cols+=2
+    num_spaces -=1
 
 #5)
 '''
@@ -105,28 +105,28 @@
 123 321
 1234321
 '''
-# for r in range(1,5):
-#     s=""
-#     i=1
-#     for c in range(1,8):
-#         if i <= r:
-#             s += str(i)
-#         else:
-#             s += " "
-#         if c <= 3:
-#             i += 1
-#         else:
-#             i-=1
-#     print(s)
+for r in range(1,5):
+    s=""
+    i=1
+    for c in range(1,8):
+        if i <= r:
+            s += str(i)
+        else:
+            s += " "
+        if c <= 3:
+            i += 1
+        else:
+            i-=1
+    print(s)
 
 #using ternary operator:
-# for r in range(1,5):
-#     s=""
-#     i=1
-#     for c in range(1,8):
-#         s+= str(i) if i<=r else " "
-#         i+=1 if c<= 3 else -1
-#     print(s)
+for r in range(1,5):
+    s=""
+    i=1
+    for c in range(1,8):
+        s+= str(i) if i<=r else " "
+        i+=1 if c<= 3 else -1
+    print(s)
 
 #6)
 '''
@@ -136,15 +136,15 @@
 4 0 0 4 
 5 0 0 0 5
 '''
-# print(1)
-# for i in range(2,6):
-#     print(i, end ="")
-#     for j in range(i-2):
-#         if i-2 < 0:
-#             pass
-#         else:
-#             print(j*0,end="")
-#     print(i)
+print(1)
+for i in range(2,6):
+    print(i, end ="")
+    for j in range(i-2):
+        if i-2 < 0:
+            pass
+        else:
+            print(j*0,end="")
+    print(i)
 
 #7)
 '''
@@ -154,21 +154,21 @@
 1 3 3 1 
 1 4 6 4 1 
 '''
-# import math
-#
-# def choose(n,r):
-#     return math.factorial(n)//(math.factorial(n-r)*math.factorial(r))
-#
-# def print_pascal(n):
-#     if n == -1:
-#         return
-#     else:
-#         print_pascal(n - 1)
-#         for i in range(0, n+1):
-#             print(choose(n, i), end=" ")
-#         print()
-#
-# print_pascal(4)
+import math
+
+def choose(n,r):
+    return math.factorial(n)//(math.factorial(n-r)*math.factorial(r))
+
+def print_pascal(n):
+    if n == -1:
+        return
+    else:
+        print_pascal(n - 1)
+        for i in range(0, n+1):
+            print(choose(n, i), end=" ")
+        print()
+
+print_pascal(4)
 
 
 #8)
@@ -178,22 +178,22 @@
 3 5 8 
 13 21 34 55 
 '''
-# memo = [-1]*1000
-# def fibonacci(n):
-#     if memo[n] != -1:
-#         return memo[n]
-#     if n == 0 or n == 1:
-#         return 1
-#     result = fibonacci(n-1)+fibonacci(n-2)
-#     memo[n] = result
-#     return result
-#
-# count = 0
-# for j in range(1, 5):
-#     for i in range(0,j):
-#         print(fibonacci(count), end=" ")
-#         count +=1
-#     print()
+memo = [-1]*1000
+def fibonacci(n):
+    if memo[n] != -1:
+        return memo[n]
+    if n == 0 or n == 1:
+        return 1
+    result = fibonacci(n-1)+fibonacci(n-2)
+    memo[n] = result
+    return result
+
+count = 0
+for j in range(1, 5):
+    for i in range(0,j):
+        print(fibonacci(count), end=" ")
+        count +=1
+    print()
 
 
 #9)
@@ -205,20 +205,20 @@
     *
 '''
 
-# numrows = 5
-# numspaces = numrows//2
-# numstars = 1
-# for r in range(1, numrows+1):
-#     s = ""
-#     s += " " * numspaces
-#     s += "*" * numstars
-#     print(s)
-#     if r <= numrows//2:
-#         numspaces -= 1
-#         numstars += 2
-#     else:
-#         numspaces += 1
-#         numstars -= 2
+numrows = 5
+numspaces = numrows//2
+numstars = 1
+for r in range(1, numrows+1):
+    s = ""
+    s += " " * numspaces
+    s += "*" * numstars
+    print(s)
+    if r <= numrows//2:
+        numspaces -= 1
+        numstars += 2
+    else:
+        numspaces += 1
+        numstars -= 2
 
 #10)
 '''
@@ -228,17 +228,17 @@
 * *      
 * * *   
 '''
-# numrows = 5
-# numspaces = numrows - numrows//2
-# numstars = 1
-# for r in range(1, numrows+1):
-#     s = ""
-#     s += "*" * numspaces
-#     s += " " * numstars
-#     print(s)
-#     if r <= numrows//2:
-#         numspaces -= 1
-#         numstars += 2
-#     else:
-#         numspaces += 1
-#         numstars -= 2
+numrows = 5
+numspaces = numrows - numrows//2
+numstars = 1
+for r in range(1, numrows+1):
+    s = ""
+    s += "*" * numspaces
+    s += " " * numstars
+    print(s)
+    if r <= numrows//2:
+        numspaces -= 1
+        numstars += 2
+    else:
+        numspaces += 1
+        numstars -= 2
