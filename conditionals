@@ -1,130 +1,131 @@
-#1) Write a program to find the maximum of two numbers stored in variables
-# x=5
-# y=6
-#
-# if x>y:
-#     print(x)
-# else:
-#     print(y)
+1) Write a program to find the maximum of two numbers stored in variables
+x=5
+y=6
 
-#2) Write a program to find the maximum of three numbers stored in variables.
-# x=300
-# y=8
-# z=50
-#
-# largest=x
-# if y>largest:
-#     largest=y
-# if z>largest:
-#     largest=z
-#
-# print(largest)
+if x>y:
+    print(x)
+else:
+    print(y)
 
-#3) Write a program to check whether a number is negative, positive or zero. Print out “negative”, “positive”, or “zero”
-# x=-7
-# if x>0:
-#     print("positive")
-# elif x<0:
-#     print("negative")
-# else:
-#     print("zero")
+2) Write a program to find the maximum of three numbers stored in variables.
+x=300
+y=8
+z=50
 
-#4)  Write a program that prints “YES” if a number is divisible by both 5 and 11, and prints “NO” otherwise.
-# x = 30
-# if (x%7==0 and x%5==0):
-#      print("YES")
-# else:
-#     print("NO")
+largest=x
+if y>largest:
+    largest=y
+if z>largest:
+    largest=z
 
-#5) Write a program to check whether a year is leap year or not.
-# x=1900
-# if(x%4==0):
-#     if(x%100==0):
-#         if(x%400==0):
-#             print("leap year")
-#         else:
-#             print("Not a leap year")
-#     else:
-#         print("leap year")
-# else:
-#     print("not a leap year")
+print(largest)
 
-#6)Write a program tWrite a program to check whether a character is uppercase or lowercase alphabet.
-# x='M'
-#
-# if x>='a' and x<='z':
-#     print("L")
-# elif x>='A' and x<='Z':
-#     print("U")
+3) Write a program to check whether a number is negative, positive or zero. Print out “negative”, “positive”, or “zero”
+x=-7
+if x>0:
+    print("positive")
+elif x<0:
+    print("negative")
+else:
+    print("zero")
 
-#7)Write a program which takes month number and print number of days in that month. For example:
-# For month=1 print “31 days”
-# For month=2 print “28 days”
-# month=2
-# if(month==1):
-#     print("31 days")
-# elif(month==2):
-#     print("28 days")
-# elif(month==3):
-#     print("30 days")
+4)  Write a program that prints “YES” if a number is divisible by both 5 and 11, and prints “NO” otherwise.
+x = 30
+if (x%7==0 and x%5==0):
+     print("YES")
+else:
+    print("NO")
 
-#8)Write a program to print the minimum number of Rupee notes needed to match a given amount. Available denominations of notes are 2000, 500, 100, 50.
-#For example, if the amount is 28,550, then you need 14 notes of 2000, 1 note of 500, and 1 note of 50. So total number of notes is 14+1+1 = 16.
-# x = 28650
-#
-# note50=0
-# note100=0
-# note500=0
-# note2000=0
-#
-# if x >= 2000:
-#     note2000 = x//2000
-#     x = x % 2000
-#
-# if x >= 500:
-#     note500 = x//500
-#     x = x % 500
-#
-# if x >= 100:
-#     note100 = x//100
-#     x = x % 100
-#
-# if x >= 50:
-#     note50 =0
-#     note50 = x//50
-#     x = x % 50
-#
-# print(note2000+note500+note100+note50)
+5) Write a program to check whether a year is leap year or not.
+x=1900
+if(x%4==0):
+    if(x%100==0):
+        if(x%400==0):
+            print("leap year")
+        else:
+            print("Not a leap year")
+    else:
+        print("leap year")
+else:
+    print("not a leap year")
 
-#9) Write a program to print the profit or loss, given cost price and selling price.
-# sp=100
-# cp=60
-#
-# if cp>sp:
-#     print("loss")
-#     print(cp-sp)
-# else:
-#     print("profit")
-#     print(sp-cp)
+6)Write a program tWrite a program to check whether a character is uppercase or lowercase alphabet.
+x='M'
 
-#10) Write a program to check if a triangle can be formed using the given lengths of 3 sides
-# a=5
-# b=40
-# c=3
-#
-# if(a+b>c and b+c>a and a+c>b):
-#     print("true")
-# else:
-#     print("false")
+if x>='a' and x<='z':
+    print("L")
+elif x>='A' and x<='Z':
+    print("U")
+print( chr(ord('A')+1) )
 
-#11) Write a program to check whether the triangle is equilateral, isosceles or scalene triangle.
-# a=8
-# b=5
-# c=5
-#
-# if(a==b==c):
-#     print("equilateral")
-# elif(a==b or b==c or c==a):
-#     print("isoceles")
-# elif(a!=b and b!=c and c!=a):
-#     print("scalene")
+7)Write a program which takes month number and print number of days in that month. For example:
+For month=1 print “31 days”
+For month=2 print “28 days”
+month=2
+if(month==1):
+    print("31 days")
+elif(month==2):
+    print("28 days")
+elif(month==3):
+    print("30 days")
+
+8)Write a program to print the minimum number of Rupee notes needed to match a given amount. Available denominations of notes are 2000, 500, 100, 50.
+For example, if the amount is 28,550, then you need 14 notes of 2000, 1 note of 500, and 1 note of 50. So total number of notes is 14+1+1 = 16.
+x = 28650
+
+note50=0
+note100=0
+note500=0
+note2000=0
+
+if x >= 2000:
+    note2000 = x//2000
+    x = x % 2000
+
+if x >= 500:
+    note500 = x//500
+    x = x % 500
+
+if x >= 100:
+    note100 = x//100
+    x = x % 100
+
+if x >= 50:
+    note50 =0
+    note50 = x//50
+    x = x % 50
+
+print(note2000+note500+note100+note50)
+
+9) Write a program to print the profit or loss, given cost price and selling price.
+sp=100
+cp=60
+
+if cp>sp:
+    print("loss")
+    print(cp-sp)
+else:
+    print("profit")
+    print(sp-cp)
+
+10) Write a program to check if a triangle can be formed using the given lengths of 3 sides
+a=5
+b=40
+c=3
+
+if(a+b>c and b+c>a and a+c>b):
+    print("true")
+else:
+    print("false")
+
+11) Write a program to check whether the triangle is equilateral, isosceles or scalene triangle.
+a=8
+b=5
+c=5
+
+if(a==b==c):
+    print("equilateral")
+elif(a==b or b==c or c==a):
+    print("isoceles")
+elif(a!=b and b!=c and c!=a):
+    print("scalene")
