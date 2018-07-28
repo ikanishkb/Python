@@ -1,170 +1,170 @@
-#1) Write a program to print all natural numbers from 1 to 25
-# for i in range(1,26):
-#     print(i)
+1) Write a program to print all natural numbers from 1 to 25
+for i in range(1,26):
+    print(i)
 
-#2) Write a program to print all natural numbers in reverse (from 30 to 1)
-# for i in range(30,0,-1):
-#     print(i)
+2) Write a program to print all natural numbers in reverse (from 30 to 1)
+for i in range(30,0,-1):
+    print(i)
 
-#3) Write a program to print all odd numbers between 1 and 100 inclusive.
-# for i in range (1,101,2):
-#     print(i)
+3) Write a program to print all odd numbers between 1 and 100 inclusive.
+for i in range (1,101,2):
+    print(i)
 
-#(using while loop)
-# i=1
-# while i<101:
-#     print(i)
-#     i+=2
+(using while loop)
+i=1
+while i<101:
+    print(i)
+    i+=2
 
-#4) Write a program to find the sum of all natural numbers between 1 and 50 inclusive.
-# total = 0
-# for i in range(1, 51):
-#     total += i
-# print(total)
+4) Write a program to find the sum of all natural numbers between 1 and 50 inclusive.
+total = 0
+for i in range(1, 51):
+    total += i
+print(total)
 
-#5)Write a program to find the sum of all even numbers between 1 to 50 inclusive
-# for i in range(1,51):
-#     if i % 2 == 0:
-#         print(i)
+5)Write a program to find the sum of all even numbers between 1 to 50 inclusive
+for i in range(1,51):
+    if i % 2 == 0:
+        print(i)
 
-#6)  Given a number ‘num’, find its factorial.
-# num = int(input("Enter a number: "))
-# fact = 1
-# for i in range (num,0,-1):
-#     fact = fact*i
-# print(fact)
-#
-#(using while loop)
-# num = int(input("Enter a number: "))
-# fact = 1
-# while num != 0:
-#     fact *= num
-#     num = num - 1
-# print(fact)
+6)  Given a number ‘num’, find its factorial.
+num = int(input("Enter a number: "))
+fact = 1
+for i in range (num,0,-1):
+    fact = fact*i
+print(fact)
 
-#7) Given two integers a and b, find the value of a raised to power b.
-# a = int(input("Enter 1st num: "))
-# b = int(input("Enter 2nd num: "))
-# result = 1
-# for i in range(b):
-#     result *= a
-# print (result)
+(using while loop)
+num = int(input("Enter a number: "))
+fact = 1
+while num != 0:
+    fact *= num
+    num = num - 1
+print(fact)
 
-#8) Write a program to print multiplication table (upto 10) of any number saved in variable ‘num’.
-# a = int(input("Enter a number: "))
-# for i in range (1,11):
-#     print(a," * ",i," = ", a*i)
+7) Given two integers a and b, find the value of a raised to power b.
+a = int(input("Enter 1st num: "))
+b = int(input("Enter 2nd num: "))
+result = 1
+for i in range(b):
+    result *= a
+print (result)
 
-#9) Write a program to check whether a number is Prime number or not.
-# num = 6
-# flag = True
-# for i in range(2, int(num**0.5)+1):
-#     if num % i == 0:
-#         flag = False
-#         break
-#
-# if flag:
-#     print("prime")
-# else:
-#     print("not prime")
+8) Write a program to print multiplication table (upto 10) of any number saved in variable ‘num’.
+a = int(input("Enter a number: "))
+for i in range (1,11):
+    print(a," * ",i," = ", a*i)
 
-#10) Write a program to print all Prime numbers between 1 and 100
-# for i in range(2, 101):
-#     flag = True
-#     for j in range(2, i):
-#         if i % j == 0:
-#             flag = False
-#             break
-#     if flag:
-#         print(i)
+9) Write a program to check whether a number is Prime number or not.
+num = 6
+flag = True
+for i in range(2, int(num**0.5)+1):
+    if num % i == 0:
+        flag = False
+        break
 
-#11) Ask user to enter a command. If the command is not “x” print the command and ask for the next command. Keep repeating, until the user enters “x”.
-# cmd = input("Enter a command: ")
-# while cmd != "x":
-#     print(cmd)
-#     cmd = input("Enter a command: ")
+if flag:
+    print("prime")
+else:
+    print("not prime")
 
-#12) Take N as input. If the number is prime, print “Prime” otherwise print “Not Prime”.
-# a = int(input("Enter the number to be checked: "))
-# flag = True
-# if a==1:
-#     print("wrong input")
-# else:
-#     for i in range(2,int(a**0.5)+1):
-#         if a % i == 0 :
-#             flag=False
-#             break
-#     if flag:
-#         print("prime")
-#     else:
-#         print("not prime")
+10) Write a program to print all Prime numbers between 1 and 100
+for i in range(2, 101):
+    flag = True
+    for j in range(2, i):
+        if i % j == 0:
+            flag = False
+            break
+    if flag:
+        print(i)
 
-#13) Take N as input. Print all prime numbers from 2 to N
-# N = int(input("Enter a number:"))
-# for i in range(2, N):
-#     flag = True
-#     for j in range(2, i):
-#         if i % j == 0:
-#             flag = False
-#             break
-#     if flag:
-#         print(i)
+11) Ask user to enter a command. If the command is not “x” print the command and ask for the next command. Keep repeating, until the user enters “x”.
+cmd = input("Enter a command: ")
+while cmd != "x":
+    print(cmd)
+    cmd = input("Enter a command: ")
 
-#14)  Take N as input. Calculate and print its reverse. Ex: 3247 will output 7423
-# num = int(input("Enter a number: "))
-# revnum = 0
-# while num != 0:
-#     x = int(num % 10)
-#     num = num // 10
-#     revnum = (revnum * 10) + x
-# print(revnum)
+12) Take N as input. If the number is prime, print “Prime” otherwise print “Not Prime”.
+a = int(input("Enter the number to be checked: "))
+flag = True
+if a==1:
+    print("wrong input")
+else:
+    for i in range(2,int(a**0.5)+1):
+        if a % i == 0 :
+            flag=False
+            break
+    if flag:
+        print("prime")
+    else:
+        print("not prime")
 
-#15) Take N as input. Print the sum of its odd placed digits and sum of its even placed digits.
-# num = int(input("Enter a number: "))
-# revnum = 0
-# oddsum = 0
-# evensum = 0
-# cnt = 0
-#
-# while num != 0:
-#     x = int(num % 10)
-#     num = num // 10
-#     revnum = (revnum * 10) + x
-#
-# while revnum != 0:
-#     x = int(revnum % 10)
-#     cnt = cnt + 1
-#     revnum = revnum // 10
-#
-#     if int(cnt % 2) == 0:
-#         evensum += x
-#     else:
-#         oddsum += x
-#
-# print("Sum of odd places: ", oddsum)
-# print("Sum of even places: ", evensum)
+13) Take N as input. Print all prime numbers from 2 to N
+N = int(input("Enter a number:"))
+for i in range(2, N):
+    flag = True
+    for j in range(2, i):
+        if i % j == 0:
+            flag = False
+            break
+    if flag:
+        print(i)
 
-#16) Take N as input. Print Nth Fibonacci number
-# x = 0
-# y = 1
-# i=1
-# num = int(input("Enter a number: "))
-# while i < num:
-#     temp = x
-#     x = x + y
-#     y = temp
-#     i+=1
-# print(x)
+14)  Take N as input. Calculate and print its reverse. Ex: 3247 will output 7423
+num = int(input("Enter a number: "))
+revnum = 0
+while num != 0:
+    x = int(num % 10)
+    num = num // 10
+    revnum = (revnum * 10) + x
+print(revnum)
 
-# 17) Take N as input. Print all Fibonacci numbers less than N.
-# x = 0
-# y = 1
-# i = 1
-# num = int(input("Enter a number: "))
-# print(x)
-# while i < num:
-#     temp = x
-#     x = x + y
-#     y = temp
-#     print(x)
-#     i+=1
+15) Take N as input. Print the sum of its odd placed digits and sum of its even placed digits.
+num = int(input("Enter a number: "))
+revnum = 0
+oddsum = 0
+evensum = 0
+cnt = 0
+
+while num != 0:
+    x = int(num % 10)
+    num = num // 10
+    revnum = (revnum * 10) + x
+
+while revnum != 0:
+    x = int(revnum % 10)
+    cnt = cnt + 1
+    revnum = revnum // 10
+
+    if int(cnt % 2) == 0:
+        evensum += x
+    else:
+        oddsum += x
+
+print("Sum of odd places: ", oddsum)
+print("Sum of even places: ", evensum)
+
+16) Take N as input. Print Nth Fibonacci number
+x = 0
+y = 1
+i=1
+num = int(input("Enter a number: "))
+while i < num:
+    temp = x
+    x = x + y
+    y = temp
+    i+=1
+print(x)
+
+17) Take N as input. Print all Fibonacci numbers less than N.
+x = 0
+y = 1
+i = 1
+num = int(input("Enter a number: "))
+print(x)
+while i < num:
+    temp = x
+    x = x + y
+    y = temp
+    print(x)
+    i+=1
