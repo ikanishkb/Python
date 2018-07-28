@@ -1,171 +1,171 @@
-#1) Write a function that takes as input a Fahrenheit value and returns the corresponding Celsius value
-# def print_celsius(f_temp):
-#     c_temp = (5/9) * (f_temp-32)
-#     return c_temp
-# print(print_celsius(37))
+1) Write a function that takes as input a Fahrenheit value and returns the corresponding Celsius value
+def print_celsius(f_temp):
+    c_temp = (5/9) * (f_temp-32)
+    return c_temp
+print(print_celsius(37))
 
-#2)Take as input a character ch (eg: ‘g’, ‘h’, ‘A’, ‘5’, ‘+’). Write a function that returns true if the character is uppercase and false otherwise. Print the value returned.
-# def is_upper(charac):
-#     if charac >= 'A' and charac <= 'Z':
-#         return True
-#     return False
-# print(is_upper("A"))
+2)Take as input a character ch (eg: ‘g’, ‘h’, ‘A’, ‘5’, ‘+’). Write a function that returns true if the character is uppercase and false otherwise. Print the value returned.
+def is_upper(charac):
+    if charac >= 'A' and charac <= 'Z':
+        return True
+    return False
+print(is_upper("A"))
 
-#3) Take as input two numbers x and n. Write a function which calculates and returns the xn. Print the value returned.
-# def calcpow(x, n):
-#     result=1
-#     for i in range(n):
-#         result=result*x
-#     return result
-# print(calcpow(2,5))
+3) Take as input two numbers x and n. Write a function which calculates and returns the xn. Print the value returned.
+def calcpow(x, n):
+    result=1
+    for i in range(n):
+        result=result*x
+    return result
+print(calcpow(2,5))
 
-#4) Write a function that returns true if a given number is prime, and false otherwise.
-# def is_prime(n):
-#     for i in range(2, n):
-#         if n % i == 0:
-#             return False
-#     return True
-# print(is_prime(6))
+4) Write a function that returns true if a given number is prime, and false otherwise.
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+print(is_prime(6))
 
-#5) Take as input two numbers x and n. Write a function which calculates and returns the Logn(x) of two numbers. Print the value returned. Assume that values of x and n are such that the result is going to be a whole number
-# def get_log(n, x):
-#     count = 0
-#     while x!=1:
-#         x=x//n
-#         count+=1
-#     return count
-# print(get_log(2,8)
+5) Take as input two numbers x and n. Write a function which calculates and returns the Logn(x) of two numbers. Print the value returned. Assume that values of x and n are such that the result is going to be a whole number
+def get_log(n, x):
+    count = 0
+    while x!=1:
+        x=x//n
+        count+=1
+    return count
+print(get_log(2,8)
 
-#6) Take as input a number N and P. Write a function which returns the square root of N within +/- 0.0001 error range. Print the value returned.
-#Newton's Method
-# def sq(num):
-#     lower = 0
-#     upper = num
-#     mid = (lower + upper) / 2
-#     sq = mid ** 2
-#     while abs(sq - num) > 0.001:
-#         if sq<num:
-#             lower = mid
-#         else:
-#             upper = mid
-#         mid = (lower + upper) / 2
-#         sq = mid ** 2
-#     return mid
-#
-# print(sq(100))
+6) Take as input a number N and P. Write a function which returns the square root of N within +/- 0.0001 error range. Print the value returned.
+Newton's Method
+def sq(num):
+    lower = 0
+    upper = num
+    mid = (lower + upper) / 2
+    sq = mid ** 2
+    while abs(sq - num) > 0.001:
+        if sq<num:
+            lower = mid
+        else:
+            upper = mid
+        mid = (lower + upper) / 2
+        sq = mid ** 2
+    return mid
+
+print(sq(100))
 
 
-#7)Take as input a number N. Write a function which returns the integral part of square root of the number. Print the value returned.
-# import math
-# print(math.floor(sq(100)))
+7)Take as input a number N. Write a function which returns the integral part of square root of the number. Print the value returned.
+import math
+print(math.floor(sq(100)))
 
-#8) 8. Take as input the following
-# a. A number (eg: 31416)
-# b. A digit (eg: 1)
-# Write a function that returns the number of times digit is found in the number. Eg: 1 is found 2 times in 31416 Print the value returned
+8) 8. Take as input the following
+a. A number (eg: 31416)
+b. A digit (eg: 1)
+Write a function that returns the number of times digit is found in the number. Eg: 1 is found 2 times in 31416 Print the value returned
 
-# def get_count(num, digit):
-#     count = 0
-#     while num!=0:
-#         x = num % 10
-#         if x == digit:
-#             count += 1
-#         num = num//10
-#     return count
-# print(get_count(3423212,2))
+def get_count(num, digit):
+    count = 0
+    while num!=0:
+        x = num % 10
+        if x == digit:
+            count += 1
+        num = num//10
+    return count
+print(get_count(3423212,2))
 
-#9) Take as input a number. Write a functions which returns true if the number is Armstrong number and false otherwise. Print the value returned. An example of Armstrong number is 371 because 371 = 33 + 73 + 13
-# def is_armstrong(num):
-#     a = num
-#     result=0
-#     while(a!=0):
-#         x=a%10
-#         a=a//10
-#         result += x**3
-#     return result == num:
-#
-# print(is_armstrong(231))
+9) Take as input a number. Write a functions which returns true if the number is Armstrong number and false otherwise. Print the value returned. An example of Armstrong number is 371 because 371 = 33 + 73 + 13
+def is_armstrong(num):
+    a = num
+    result=0
+    while(a!=0):
+        x=a%10
+        a=a//10
+        result += x**3
+    return result == num:
 
-#10) Take as input two numbers N1 and N2. Write a function to print all Armstrong numbers between N1 and N2.
-# def print_armstrong(n1,n2):
-#     for i in range (n1,n2+1):
-#         if is_armstrong(i):
-#             print(i)
-#
-# print_armstrong(1,1000)
+print(is_armstrong(231))
 
-#11) Take as input two numbers N1 and N2. Write a function which calculates and returns the GCD ( = HCF ) of two numbers. Print the value returned
-# def find_hcf(a, b):
-#     while a != 0 and b != 0:
-#         if a > b:
-#             a = a % b
-#         else:
-#             b = b % a
-#     if a == 0:
-#         return b
-#     return a
-# print(find_hcf(15,60))
+10) Take as input two numbers N1 and N2. Write a function to print all Armstrong numbers between N1 and N2.
+def print_armstrong(n1,n2):
+    for i in range (n1,n2+1):
+        if is_armstrong(i):
+            print(i)
 
-#12) Take as input two numbers N1 and N2. Write a function which calculates and returns the LCM of two numbers. Print the value returned.
-# def lcm(a, b):
-#     return (a*b)/find_hcf(a,b)
-# print(lcm(15,60))
+print_armstrong(1,1000)
 
-#13)Take as input two numbers N1 and N2. Write a function which prints first N1 terms of the series 3n + 2 which are not multiples of N2.
-# def multiples(n1,n2):
-#     count = 1
-#     n = 1
-#     while count<=n1:
-#         x = (3*n) + 2
-#         if x % n2 != 0:
-#             print(x)
-#             count+=1
-#         n+=1
-# multiples(5,2)
+11) Take as input two numbers N1 and N2. Write a function which calculates and returns the GCD ( = HCF ) of two numbers. Print the value returned
+def find_hcf(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    if a == 0:
+        return b
+    return a
+print(find_hcf(15,60))
 
-#14) Take as input a number N. Following this, take N more inputs from the user to form a sequence S = s1, s2, .., sN. Compute if it is possible to split sequence into two sequences s1 to si and si+1 -to sN such that first sequence is strictly decreasing and second is strictly increasing. Print true/false as output
-# def is_dec_inc():
-#     num = int(input("Enter len: "))
-#     prev = float("inf")
-#     is_dec = True
-#     for i in range(num):
-#         curr = int(input("Enter a number: "))
-#         if is_dec:
-#             if prev > curr:
-#                 prev = curr
-#             else:
-#                 is_dec = False
-#         else:
-#             if prev < curr:
-#                 prev = curr
-#             else:
-#                 return False
-#     return True
-#
-#
-# print(is_dec_inc())
+12) Take as input two numbers N1 and N2. Write a function which calculates and returns the LCM of two numbers. Print the value returned.
+def lcm(a, b):
+    return (a*b)/find_hcf(a,b)
+print(lcm(15,60))
 
-#15) simple calculator
-# def calc(a,b):
-#     char = input("enter the character: ")
-#     while char != "X" and char != "x":
-#         if char == "+":
-#             print(a+b)
-#         if char == "*":
-#             print(a*b)
-#         if char == "-":
-#             print(a-b)
-#         if char == "/":
-#             print(a/b)
-#         if char == "%":
-#             print(a%b)
-#         char = input("enter the character: ")
-#
-# calc(3,5)
+13)Take as input two numbers N1 and N2. Write a function which prints first N1 terms of the series 3n + 2 which are not multiples of N2.
+def multiples(n1,n2):
+    count = 1
+    n = 1
+    while count<=n1:
+        x = (3*n) + 2
+        if x % n2 != 0:
+            print(x)
+            count+=1
+        n+=1
+multiples(5,2)
 
-#16) Run a loop from start to end, increasing the value by step each time. Each value in the loop represents a Fahrenheit value that you have to convert into Celsius.
-#
-# def print_temp_step(start,stop,step):
-#     for i in range(start,stop+1,step):
-#         print(print_celsius(i))
-# print_temp_step(0,100,20)
+14) Take as input a number N. Following this, take N more inputs from the user to form a sequence S = s1, s2, .., sN. Compute if it is possible to split sequence into two sequences s1 to si and si+1 -to sN such that first sequence is strictly decreasing and second is strictly increasing. Print true/false as output
+def is_dec_inc():
+    num = int(input("Enter len: "))
+    prev = float("inf")
+    is_dec = True
+    for i in range(num):
+        curr = int(input("Enter a number: "))
+        if is_dec:
+            if prev > curr:
+                prev = curr
+            else:
+                is_dec = False
+        else:
+            if prev < curr:
+                prev = curr
+            else:
+                return False
+    return True
+
+
+print(is_dec_inc())
+
+15) simple calculator
+def calc(a,b):
+    char = input("enter the character: ")
+    while char != "X" and char != "x":
+        if char == "+":
+            print(a+b)
+        if char == "*":
+            print(a*b)
+        if char == "-":
+            print(a-b)
+        if char == "/":
+            print(a/b)
+        if char == "%":
+            print(a%b)
+        char = input("enter the character: ")
+
+calc(3,5)
+
+16) Run a loop from start to end, increasing the value by step each time. Each value in the loop represents a Fahrenheit value that you have to convert into Celsius.
+
+def print_temp_step(start,stop,step):
+    for i in range(start,stop+1,step):
+        print(print_celsius(i))
+print_temp_step(0,100,20)
