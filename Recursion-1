@@ -1,0 +1,227 @@
+1. Given a number, find its factorial, using recursion.
+def factorial(n):
+    if n == 1:
+        return 1
+    return n*factorial(n-1)
+print(factorial(7))
+
+2. Write a function to find the HCF of 2 numbers using recursion.
+def hcf(a,b):
+    if a == 0:
+        print(b)
+    if b == 0:
+        print(a)
+    else:
+        return hcf(a%b,a) if (a>b) else hcf(a,b%a)
+hcf(60,15)
+
+3. Write a recursive function which tests ifu the array is a palindrome and returns a Boolean value.
+def palindrome(string,str_beg,str_end):
+    if str_end <= str_beg:
+        return True
+    if string[str_beg] != string[str_end]:
+        return False
+    else:
+        return palindrome(string, str_beg+1,str_end-1)
+string_to_check = "arra"
+beg = 0
+end = len(string_to_check)-1
+
+print(palindrome(string_to_check,beg,end))
+
+4. Write a recursive function which reverses the array. Print the values of reversed array.
+def rev_arr(arr,len):
+    if len == -1:
+        return
+    print(arr[len])
+    return rev_arr(arr, len-1)
+
+arr = [1,2,3,4,5,6,7,8,9,10]
+length = len(arr)-1
+rev_arr(arr,length)
+
+5. Write a function to find the value of a raised to b, using recursion. Optimize it.
+def power(a,b):
+    if b == 0:
+        return 1
+    p = b
+    if b<0:
+        p = -b
+    partial = pow(a, p // 2)
+    if p%2 == 0:
+        result = partial*partial
+    else:
+        result = a*partial*partial
+    return result if b>0 else 1/result
+print(pow(2,-10))
+
+6. Given a number n, find the nth fibonacci number. Optimize it.
+memo = [-1]*1000
+def fibonacci(n):
+    if memo[n]!=-1:
+        return memo[n]
+    if n == 0 or n == 1:
+        return 1
+    result = fibonacci(n-1)+fibonacci(n-2)
+    memo[n] = result
+    return result
+print(fibonacci(7))
+
+7. Take as input N, a number. Print the following pattern recursively (for N = 5)
+'''
+*
+* *
+* * *
+* * * *
+* * * * *
+'''
+def print_pat1(n):
+    if n == 1:
+        print("*")
+    else:
+        print_pat1(n-1)
+        print("*"*n)
+print_pat1(5)
+
+8. Take as input N, a number. Print the following pattern recursively (for N = 5)
+'''
+* * * * * 
+* * * * 
+* * *
+* *							
+*
+'''
+def print_pat2(n):
+    if n == 1:
+        print("*")
+    else:
+        print("*" * n)
+        print_pat2(n-1)
+print_pat2(5)
+
+9. Print pascal's triangle using recursion for a given number N
+import math
+
+def choose(n,r):
+    return math.factorial(n)//(math.factorial(n-r)*math.factorial(r))
+
+def print_pascal(n):
+    if n == -1:
+        return
+    else:
+        print_pascal(n - 1)
+        for i in range(0, n+1):
+            print(choose(n, i), end=" ")
+        print()
+
+print_pascal(4)
+
+10. Take as input N, a number. Write a recursive function to find Nth item in a series where 1st item is 1, 2nd item is 1 + 2 = 3, 3rd item is 1 + 2 + 3 = 6, so on and so forth. Print the value returned.
+def sum_series(n):
+    if n == 1:
+        return 1
+    return n + sum_series(n-1)
+print(sum_series(5))
+
+11. Write a recursive function which returns true if the array is sorted and false otherwise.
+def is_sorted(arr):
+    if len(arr) == 1:
+        return True
+    return arr[0] <= arr[1] and is_sorted(arr[1:])
+arr = [1,2,3,4,5,6,7,8]
+print(is_sorted(arr))
+
+12. Take as input a number M, and an array. Write a recursive function which returns true if M is contained in the array and false otherwise.
+def search_ele(arr,num,len):
+    if len == -1:
+        return -1
+    if arr[len] != num:
+        return search_ele(arr,num,len-1)
+    else:
+        return len+1
+
+arr = [1,2,3,4,5,6,7,8]
+length = len(arr)-1
+print(search_ele(arr,0,length))
+
+13. Take as input a number M, and an array. Write a recursive function which returns the last index at which M is found in the array and -1 if M is not found anywhere.
+def search_ele(arr,num,len):
+    if len == -1:
+        return -1
+    if arr[len] != num:
+        return search_ele(arr,num,len-1)
+    else:
+        return len
+
+arr = [1,2,3,4,3,3,5,6,3,7,8]
+length = len(arr)-1
+print(search_ele(arr,3,length))
+
+14.Take as input a number M, and an array. Write a recursive function which returns the first index at which M is found in the array and -1 if M is not found anywhere.
+def search_ele(arr,num,beg,len):
+    if beg == len+1:
+        return -1
+    if arr[beg] != num:
+        return search_ele(arr,num,beg+1,len)
+    else:
+        return beg
+
+arr = [1,2,3,4,3,3,5,6,3,7,8]
+beg = 0
+num = 3
+length = len(arr)-1
+print(search_ele(arr,num,beg,length))
+
+15.Take as input N, the size of array. Take N more inputs and store that in an array. Print all possible subsets of the array.
+E.g. for [1, 2, 3] following permutations are possible
+'''
+[]
+[1]
+[2]
+[3]
+[1, 2]
+[1,  3]
+[2,  3]
+[1, 2, 3]
+'''
+def get_subsets(arr):
+    if len(arr) == 1:
+        return [[], [arr[0]]]
+    result = []
+    elem = arr[0]
+    subset_list = get_subsets(arr[1:])
+    for ss in subset_list:
+        ss2 = list(ss)
+        ss2.append(elem)
+        result.append(ss)
+        result.append(ss2)
+    return result
+
+arr = [1, 2, 3]
+print(get_subsets(arr))
+
+16. Take as input N, the size of array. Take N more inputs and store that in an array. Print all possible permutations
+'''
+[1, 2, 3]
+[1, 3, 2] 
+[2, 1, 3]
+[2, 3, 1] 
+[3, 1, 2] 
+[3, 2, 1]
+'''
+def get_permutations(arr):
+    if len(arr) == 1:
+        return [[arr[0]]]
+    result = []
+
+    for i in range(len(arr)):
+        elem = arr[i]
+        remaining = arr[:i] + arr[i+1:]                   #copy of original list
+        permutation_list = get_permutations(remaining)
+        for p in permutation_list:
+            p.insert(0, elem)
+            result.append(p)
+    return result
+
+arr = [1, 2, 3]
+print(get_permutations(arr))
