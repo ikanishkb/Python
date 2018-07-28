@@ -1,0 +1,183 @@
+1) row wise printing
+def row_wise_print(mat):
+    nr = len(mat)
+    nc = len(mat[0])
+    for i in range(nr):
+        for j in range(nc):
+            print(mat[i][j])
+
+mat = [
+    [11, 12, 13, 14],
+    [21, 22, 23, 24],
+    [31, 32, 33, 34],
+    [41, 42, 43, 44]
+        ]
+
+row_wise_print(mat)
+
+2) column wise printing
+def col_wise_print(mat):
+    nr = len(mat)
+    nc = len(mat[0])
+    for j in range(nc):
+        for i in range(nr):
+            print(mat[i][j])
+
+mat = [
+    [11, 12, 13, 14],
+    [21, 22, 23, 24],
+    [31, 32, 33, 34],
+    [41, 42, 43, 44]
+        ]
+
+col_wise_print(mat)
+
+3) Wave printing columnwise
+def wave_print_col(mat):
+    nr = len(mat)
+    nc = len(mat[0])
+    for j in range(nc):
+        if j % 2 == 0:
+            for i in range(nr):
+                print(mat[i][j])
+        else:
+            for i in range(nr-1,-1,-1):
+                print(mat[i][j])
+
+
+mat = [
+    [11, 12, 13, 14],
+    [21, 22, 23, 24],
+    [31, 32, 33, 34],
+    [41, 42, 43, 44]
+        ]\
+
+wave_print_col(mat)
+
+4) Wave printing row-wise
+def wave_print_row(mat):
+    nr = len(mat)
+    nc = len(mat[0])
+    for i in range(nr):
+        if i % 2 == 0:
+            for j in range(nc):
+                print(mat[i][j])
+        else:
+            for j in range(nc-1,-1,-1):
+                print(mat[i][j])
+
+
+mat = [
+    [11, 12, 13, 14],
+    [21, 22, 23, 24],
+    [31, 32, 33, 34],
+    [41, 42, 43, 44]
+        ]
+
+wave_print_row(mat)
+
+
+5) Spiral printing anticlockwise
+def spiral_print_anticl(mat):
+    nr = len(mat)
+    nc = len(mat[0])
+    top = 0
+    bottom = nr - 1
+    left = 0
+    right = nc - 1
+    while(top<= bottom and left<=right):
+        for r in range(top,bottom+1):
+            print(mat[r][left])
+        left+=1
+
+        if left>right:
+            break
+
+        for c in range(left,right+1):
+            print(mat[bottom][c])
+        bottom-=1
+
+        if top>bottom:
+            break
+
+        for r in range(bottom,top-1,-1):
+            print(mat[r][right])
+        right-=1
+
+        if left>right:
+            break
+
+        for c in range(right,left-1,-1):
+            print(mat[top][c])
+        top+=1
+
+
+
+mat = [
+    [11, 12, 13, 14],
+    [21, 22, 23, 24],
+    [31, 32, 33, 34],
+    [41, 42, 43, 44]
+        ]
+
+spiral_print_anticl(mat)
+
+6) Spiral printing clockwise
+def spiral_print_cl(mat):
+    nr = len(mat)
+    nc = len(mat[0])
+    top = 0
+    bottom = nr - 1
+    left = 0
+    right = nc - 1
+    while(top<= bottom and left<=right):
+
+        for c in range(left,right+1):
+            print(mat[top][c])
+        top+=1
+
+        if top>bottom:
+            break
+
+        for r in range(top, bottom + 1):
+            print(mat[r][right])
+        right -= 1
+
+        if left > right:
+            break
+
+        for c in range(right, left - 1, -1):
+            print(mat[bottom][c])
+        bottom -= 1
+
+        if top > bottom:
+            break
+
+        for r in range(bottom,top-1,-1):
+            print(mat[r][left])
+        left+=1
+
+
+mat = [
+    [11, 12, 13, 14],
+    [21, 22, 23, 24],
+    [31, 32, 33, 34],
+    [41, 42, 43, 44]
+        ]
+
+spiral_print_cl(mat)
+
+
+7)Given a list containing the values of a particular stock at regular interval of time, print it out as a graph.
+stock = [1, 2, 3, 2, 1, 0, 1, 2]
+mat=[]
+for i in range(8):
+    mat.append([" "," "," "," "," "," "," "," "])
+
+for i in range(7,-1,-1):
+    mat[stock[i]][i] = "*"
+
+for i in range(7,-1,-1):
+    for j in range(8):
+        print(mat[i][j], end =' ')
+    print()
